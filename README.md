@@ -4,13 +4,15 @@
 
 `composer install`
 
-`cp .env.example to .env`
+`cp .env.example .env`
 
 set up database config
 
 `php artisan migrate`
 
 `php artisan db:seed`
+
+`php artisan key:generate`
 
 `npm install`
 
