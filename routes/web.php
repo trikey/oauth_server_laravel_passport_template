@@ -11,6 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Auth::routes();
+
+Route::get('/', 'OAuthController@index');
+Route::middleware('auth')->get('/clients', 'OAuthController@clients');
+Route::middleware('auth')->get('/authorized_clients', 'OAuthController@authorizedClients');
+Route::middleware('auth')->get('/tokens', 'OAuthController@tokens');
